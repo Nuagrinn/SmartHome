@@ -15,7 +15,7 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
-import ru.mycompany.smarthome.service.DeviceMessageConsumer;
+import ru.mycompany.smarthome.service.DeviceMessageConsumerService;
 
 @Configuration
 @EnableKafka
@@ -57,8 +57,8 @@ public class KafkaConfig {
     }
 
     @Bean
-    public DeviceMessageConsumer deviceMessageConsumer() {
-        return new DeviceMessageConsumer();
+    public DeviceMessageConsumerService deviceMessageConsumer() {
+        return new DeviceMessageConsumerService();
     }
 
 }
