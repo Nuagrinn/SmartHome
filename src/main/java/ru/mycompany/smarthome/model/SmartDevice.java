@@ -3,9 +3,8 @@ package ru.mycompany.smarthome.model;
 import javax.persistence.*;
 
 @Entity
+@MappedSuperclass
 @Table(name = "smart_device")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "device_type")
 public abstract class SmartDevice {
 
     @Id
